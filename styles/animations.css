@@ -12,3 +12,27 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+.like-icon.is-liked .heart {
+    animation: icon-liked 0.3s ease-in 0.1s forwards alternate-reverse;
+    transform-origin: center;
+  }
+
+@keyframes icon-liked {
+    to {
+      scale: 1.5;
+    }
+  }
+  
+  .like-icon.is-liked .sparks {
+    animation: sparks 0.3s ease-in 0.3s forwards alternate-reverse;
+  }
+  
+  @keyframes sparks {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .like-icon.is-liked {
+    fill: var(--sparks-color);
+  }
